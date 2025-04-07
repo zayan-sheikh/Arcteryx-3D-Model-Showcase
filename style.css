@@ -15,14 +15,88 @@ body {
     position: fixed;
     bottom: 0px;
     left: 0px;
-    margin: 20px;
+    margin: 10px;
     height: 180px;
     width: 500px;
     text-align: left;
-    color: rgb(0, 0, 0);
+    color: #333;
     background: rgba(0, 0, 0, 0);
     padding: 1rem 1.5rem;
     border-radius: 0.75rem;
     z-index: 100;
   }
+
+  #credit {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 3;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: 'Outfit', sans-serif;
+  }
+  
+  #credit a {
+    font-size: 1.2rem;
+    text-decoration: none;
+  }
+  
+  #credit a[aria-label="Instagram"] i {
+    color: #E1306C;
+  }
+  
+  #credit a[aria-label="LinkedIn"] i {
+    color: #0077B5;
+  }
+  
+  #credit a[aria-label="GitHub"] i {
+    color: #333;
+  }
+  
+  #credit a i:hover {
+    opacity: 0.7;
+  }
+
+  #credit a[aria-label="Gmail"] i {
+    color: #333;
+  }
+  
+
+  #splash {
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.7);
+    z-index: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 1s ease-in-out;
+    font-family: 'Outfit', sans-serif;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+  
+  .splash-content {
+    text-align: center;
+    color: #333;
+    font-size: 1.5rem;
+  }
+  
+  .splash-content i {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: block;
+    color: #555;
+  }
+  
+  #splash.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  
   
