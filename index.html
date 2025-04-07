@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terry the Archaopteryx</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      height: 100%;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    canvas {
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+
+    #overlay h1 {
+      font-size: 6rem;
+      margin: 0;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    #overlay p {
+      font-size: 3rem;
+      margin-top: 0rem;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    #logo {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 100px;
+      height: auto;
+      z-index: 2;
+    }
+  </style>
+</head>
+<body>
+  <img id="logo" src="https://cdn.freebiesupply.com/logos/large/2x/arc-teryx-01-logo-png-transparent.png" alt="Arc'teryx Logo">
+  
+  <div id="overlay">
+    <h1>Terry</h1>
+    <p>the Archaopteryx</p>
+  </div>
+  
+  <canvas id="canvas3d"></canvas>
+
+  <script type="module">
+    import { Application } from 'https://unpkg.com/@splinetool/runtime@1.0.70/build/runtime.js';
+
+    const canvas = document.getElementById('canvas3d');
+    const app = new Application(canvas);
+    app.load('https://prod.spline.design/GK1lfCv4abNMXGOS/scene.splinecode');
+  </script>
+</body>
+</html>

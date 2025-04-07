@@ -1,0 +1,28 @@
+body {
+    background-color:rgb(233, 233, 233);
+    color: rgb(59, 59, 59)
+}
+
+#logo {
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    z-index: -100;
+    width: 100px;
+}
+
+#overlay {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    margin: 20px;
+    height: 180px;
+    width: 500px;
+    text-align: left;
+    color: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0);
+    padding: 1rem 1.5rem;
+    border-radius: 0.75rem;
+    z-index: 100;
+  }
+  
