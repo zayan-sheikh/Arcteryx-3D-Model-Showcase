@@ -5,64 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Terry the Archaopteryx</title>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      height: 100%;
-      font-family: 'Outfit', sans-serif;
-    }
-
-    canvas {
-      width: 100%;
-      height: 100%;
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 0;
-    }
-
-    #overlay h1 {
-      font-size: 6rem;
-      margin: 0;
-      font-family: 'Outfit', sans-serif;
-    }
-
-    #overlay p {
-      font-size: 3rem;
-      margin-top: 0rem;
-      font-family: 'Outfit', sans-serif;
-    }
-
-    #logo {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      width: 100px;
-      height: auto;
-      z-index: 2;
-    }
-  </style>
 </head>
+
 <body>
+  <div id="splash">
+    <div class="splash-content">
+      <i class="fa-regular fa-hand-pointer"></i>
+      <p>Click and drag to move!</p>
+    </div>
+  </div>
+
   <img id="logo" src="https://cdn.freebiesupply.com/logos/large/2x/arc-teryx-01-logo-png-transparent.png" alt="Arc'teryx Logo">
-  
+
   <div id="overlay">
     <h1>Arc'teryx logo</h1>
     <p>If it was good</p>
   </div>
-  
+
   <canvas id="canvas3d"></canvas>
+
+  <div id="credit">
+    <span>Made by Zayan Sheikh</span>
+    <a href="https://instagram.com/zayan.s_" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://linkedin.com/in/zayans" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    <a href="https://github.com/zayan-sheikh" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+    <a href="mailto:zayans@student.ubc.ca" target="_blank" aria-label="Gmail"><i class="fas fa-envelope"></i></a>
+  </div>
 
   <script type="module">
     import { Application } from 'https://unpkg.com/@splinetool/runtime@1.0.70/build/runtime.js';
-
     const canvas = document.getElementById('canvas3d');
     const app = new Application(canvas);
     app.load('https://prod.spline.design/GK1lfCv4abNMXGOS/scene.splinecode');
+  </script>
+
+  <script>
+    const splash = document.getElementById('splash');
+    setTimeout(() => {
+      splash.classList.add('hidden');
+    }, 2500);
   </script>
 </body>
 </html>
